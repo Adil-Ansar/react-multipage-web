@@ -6,21 +6,26 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <MainHeader>
-      <NavLink>
-        <img src="./images/logo.jpeg" alt="logo"/>
+      <NavLink to="/">
+        <img src="./images/logo.jpeg" alt="logo" className='logo'/>
       </NavLink>
-      <Navbar/>
+      <Navbar />
     </MainHeader>
-  )
+  );
 };
 
 const MainHeader = styled.header`
   padding: 0 4.8rem;
   height: 10rem;
-  background-color: ${({theme}) => theme.color.bg};
+  background-color: ${({ theme }) => theme.colors.bg};
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .logo {
+    max-height: 5%;
+    max-width: 20%;
+  }
 `;
 
-export default Header
+export default Header;
