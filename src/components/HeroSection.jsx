@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Button } from '../styles/Button';
 import { NavLink } from 'react-router-dom';
+import { AppContext } from '../context';
 
 const HeroSection = ({name, image}) => {
+  const firstName = useContext(AppContext);
     return (
         <Wrapper>
             <div className="container grid grid-two-column">
@@ -11,7 +13,7 @@ const HeroSection = ({name, image}) => {
                     <p className='hero-top-data'>THIS IS ME</p>
                     <h1 className='hero-heading'>{name}</h1>
                     <p className="hero-para">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        I am {firstName}, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Et netus et malesuada fames ac turpis egestas.
                     </p>
