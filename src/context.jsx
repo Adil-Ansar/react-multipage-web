@@ -3,12 +3,12 @@ import reducer from "./reducer";
 
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
+const initialState = {
+    name: "",
+    image: ""
+};
 
-    const initialState = {
-        name: "",
-        image: ""
-    };
+const AppProvider = ({ children }) => {
 
     const updateHomePage = () => {
         return dispatch({
