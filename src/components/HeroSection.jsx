@@ -4,8 +4,8 @@ import { Button } from '../styles/Button';
 import { NavLink } from 'react-router-dom';
 import { useGlobalContext } from '../context';
 
-const HeroSection = ({ name, image }) => {
-  const {fname, age} = useGlobalContext();
+const HeroSection = () => {
+  const { name, image } = useGlobalContext();
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -13,7 +13,7 @@ const HeroSection = ({ name, image }) => {
           <p className='hero-top-data'>THIS IS ME</p>
           <h1 className='hero-heading'>{name}</h1>
           <p className="hero-para">
-            I am {fname}, {age}, consectetur adipiscing elit,
+            I am {name}, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Et netus et malesuada fames ac turpis egestas.
           </p>

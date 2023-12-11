@@ -1,11 +1,40 @@
-import React, { useContext } from "react";
+import React, { useContext, useReducer } from "react";
+import reducer from "./reducer";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-    return <AppContext.Provider value={{ fname: "Adil", age: 24 }}>
+
+    const initialState = {
+        name: "",
+        image: ""
+    };
+
+    const updateHomePage = () => {
+        return dispatch({
+            type: "HOME_UPDATE",
+            payload: {
+                name: "Node.js Developer",
+                image: "./images/hero.jpg"
+            }
+        });
+    }
+
+    const updateAboutPage = () => {
+        return dispatch({
+            type: "ABOUT_UPDATE",
+            payload: {
+                name: "Adil Ansari",
+                image: "./images/about.jpg"
+            }
+        });
+    }
+
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    return (<AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
         {children}
-    </AppContext.Provider>
+    </AppContext.Provider>)
 }
 
 const useGlobalContext = () => {
