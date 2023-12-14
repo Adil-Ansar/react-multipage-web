@@ -33,12 +33,12 @@ const Services = () => {
         }
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
     padding: 9rem 0;
-    background-color: ${({ theme }) => theme.colors.bg}
+    background-color: ${({ theme }) => theme.colors.bg};
 
     .container {
       max-width: 120rem;
@@ -47,7 +47,7 @@ const Wrapper = styled.section`
     .card {
       border: 0.1rem solid rgb(170 170 170 / 40%);
 
-      .car-data {
+      .card-data {
         padding: 0 2rem;
       }
 
@@ -62,12 +62,13 @@ const Wrapper = styled.section`
         border: 0.1rem solid rgb(98 84 243);
         display: flex;
         justify-content: center;
+        align-items: center;
         color: rgb(98 84 243);
         font-size: 1.4rem;
 
         &:hover {
           background-color: rgb(98 84 243);
-          color: #fff
+          color: #fff;
 
         }
       }
@@ -90,7 +91,7 @@ const Wrapper = styled.section`
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         transition: all 0.2s linear;
-        curson : pointer;
+        cursor : pointer;
       }
       &:hover::after {
         width: 100%
