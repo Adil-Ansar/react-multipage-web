@@ -83,7 +83,7 @@ const Wrapper = styled.section`
       overflow: hidden;
       transition: all 0.5s linear;
       &::after{
-        content : "";
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -94,7 +94,7 @@ const Wrapper = styled.section`
         cursor : pointer;
       }
       &:hover::after {
-        width: 100%
+        width: 100%;
       }
       &:hover img {
         transform: scale(1.2)
