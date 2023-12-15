@@ -17,7 +17,7 @@ const Contact = () => {
 
       <div className="container">
         <div className="contact-form">
-          <form action="https://formspree.io/f/xjvnbbde" method='POST' className='contact-inputes'>
+          <form action="https://formspree.io/f/xjvnbbde" method='POST' className='contact-inputs'>
             <input
               type="text"
               name="username"
@@ -58,12 +58,12 @@ const Wrapper = styled.section`
       max-width: 50rem;
       margin: auto;
 
-      .contact-inputes {
+      .contact-inputs {
         display: flex;
         flex-direction: column;
         gap: 3rem;
 
-        inpu[type="submit"] {
+        input[type="submit"] {
           cursor: pointer;
           transition: all 0.2s;
 
